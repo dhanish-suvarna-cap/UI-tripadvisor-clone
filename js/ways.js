@@ -36,7 +36,7 @@ const arr2 = [
     }
 ]
 
-var explore_box = document.querySelector(".ways_box");
+var ways_box = document.querySelector(".ways_box");
 var left2 = document.querySelector(".left2");
 var right2 = document.querySelector(".right2");
 
@@ -59,14 +59,14 @@ const content2 = arr2.map((element)=>{
 
 // Initial state
 for (var i = 0; i < 4; i++) {
-    explore_box.innerHTML += content2[i];
+    ways_box.innerHTML += content2[i];
 }
 left2.style.visibility= "hidden";
 
 const addContent2 = (start, end) => {
-    explore_box.innerHTML="";
+    ways_box.innerHTML="";
     for (var i = start; i < end; i++) {
-        explore_box.innerHTML += content2[i];
+        ways_box.innerHTML += content2[i];
     }
 }
 
