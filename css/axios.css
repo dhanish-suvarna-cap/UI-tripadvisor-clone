@@ -1,0 +1,29 @@
+.axios_container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.axios_container .user {
+    border: 2px solid black;
+    border-radius: 20px;
+    text-align: center;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 8px 16px;
+}
+
+.axios_container .user:hover {
+    background: black;
+    cursor: pointer;
+}
+
+.axios_container .user a{
+    text-decoration: none;
+    color: black;
+    padding-left: 8px;
+}
+
+.axios_container .user:hover a{
+    color: white;
+}

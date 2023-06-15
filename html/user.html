@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User</title>
+    <link rel="shortcut icon" href="https://static.tacdn.com/favicon.ico?v2" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        .usr-content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="usr-content">
+    </div>
+    <script>
+        const getUser = async (URL) => {
+            try {
+                let response = await axios.get(URL);
+                return response.data;
+            } catch (err) {
+                console.log(err);
+            }
+        };
+
+        const main = async () => {
+            let id;
+            const urlParams = new URLSearchParams(location.search);
+
+            if(urlParams.has('id')){
+                id = urlParams.get('id');
+            }
+
+            let response = await getUser(`https://jsonplaceholder.typicode.com/users?id=${id}`);
+            console.log(response);
+
+            let axios_container = document.querySelector(".usr-content");
+
+            axios_container.innerHTML = `
+                                <h3>ID : ${response[0].id}</h3>
+                                <h3>Name : ${response[0].name}</h3>
+                                <h3>UserName : ${response[0].username}</h3>
+                                <h3>Email : ${response[0].email}</h3>
+                                <h3>Address : ${response[0].address.street}</h3>
+                                <h3>Pincode : ${response[0].address.zipcode}</h3>
+                                <h3>Phone : ${response[0].phone}</h3>
+                                <h3>Website : ${response[0].website}</h3>
+                                <h3>Company Name : ${response[0].company.name}</h3>`;
+        }
+
+        main();
+    </script>
+</body>
+</html>

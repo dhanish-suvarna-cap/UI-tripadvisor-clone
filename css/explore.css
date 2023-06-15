@@ -1,0 +1,66 @@
+.explore_container {
+    margin-top: 70px;
+}
+
+.explore_box{
+    display: flex;
+    justify-content: space-between;
+}
+
+.explore_box div{
+    background-size: cover;
+    width: 24%;
+    height: 280px;
+}
+
+.explore > h1 {
+    position: relative;
+    top : 220px;
+    left: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.right {
+    position: relative;
+    bottom: 160px;
+    left: 1145px;
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left {
+    position: relative;
+    top: 170px;
+    right: 18px;
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right:hover {
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+.left:hover {
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+.explore_box div:hover {
+    cursor: pointer;
+}

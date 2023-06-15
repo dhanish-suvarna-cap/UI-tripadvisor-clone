@@ -1,0 +1,78 @@
+.ways_container {
+    margin-top: 70px;
+}
+
+.ways_box{
+    display: flex;
+    justify-content: space-between;
+}
+
+.ways_box div{
+    background-size: cover;
+    width: 24%;
+    height: 280px;
+}
+
+.data {
+    position: relative;
+    top: 260px;
+    width: 100% !important;
+    height: 100px !important;
+}
+
+.heart {
+    background: white;
+    border-radius: 50%;
+    position: relative;
+    left: 235px;
+    top: 5px;
+    width: 38px !important;
+    height: 38px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right2 {
+    position: relative;
+    bottom: 160px;
+    left: 1145px;
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left2 {
+    position: relative;
+    top: 170px;
+    right: 18px;
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right2:hover {
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+.left2:hover {
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+.ways_box div:hover {
+    cursor: pointer;
+}

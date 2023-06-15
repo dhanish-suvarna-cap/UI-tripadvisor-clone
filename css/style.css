@@ -1,0 +1,26 @@
+@import url(navbar.css);
+@import url(menu.css);
+@import url(search.css);
+@import url(check.css);
+@import url(explore.css);
+@import url(ways.css);
+@import url(axios.css);
+
+:root {
+    --primary : ;
+    --secondary : ;
+}
+
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
