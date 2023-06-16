@@ -26,42 +26,6 @@
 <body>
     <div class="usr-content">
     </div>
-    <script>
-        const getUser = async (URL) => {
-            try {
-                let response = await axios.get(URL);
-                return response.data;
-            } catch (err) {
-                console.log(err);
-            }
-        };
-
-        const main = async () => {
-            let id;
-            const urlParams = new URLSearchParams(location.search);
-
-            if(urlParams.has('id')){
-                id = urlParams.get('id');
-            }
-
-            let response = await getUser(`https://jsonplaceholder.typicode.com/users?id=${id}`);
-            console.log(response);
-
-            let axios_container = document.querySelector(".usr-content");
-
-            axios_container.innerHTML = `
-                                <h3>ID : ${response[0].id}</h3>
-                                <h3>Name : ${response[0].name}</h3>
-                                <h3>UserName : ${response[0].username}</h3>
-                                <h3>Email : ${response[0].email}</h3>
-                                <h3>Address : ${response[0].address.street}</h3>
-                                <h3>Pincode : ${response[0].address.zipcode}</h3>
-                                <h3>Phone : ${response[0].phone}</h3>
-                                <h3>Website : ${response[0].website}</h3>
-                                <h3>Company Name : ${response[0].company.name}</h3>`;
-        }
-
-        main();
-    </script>
+    <script src="../js/user.js"></script>
 </body>
 </html>
