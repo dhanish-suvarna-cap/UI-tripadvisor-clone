@@ -76,3 +76,22 @@
 .ways_box div:hover {
     cursor: pointer;
 }
+
+.star{
+    color: rgb(0, 160, 99);
+    font-size: 15px !important;
+}
+
+.rating {
+    display: flex;
+    font-size: 10px;
+    padding: 6px 0;
+}
+
+.total_rating {
+    padding-left: 6px;
+}
+
+.ways:hover {
+    opacity: 0.9;
+}

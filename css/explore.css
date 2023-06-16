@@ -64,3 +64,7 @@
 .explore_box div:hover {
     cursor: pointer;
 }
+
+.explore:hover {
+    opacity: 0.9;
+}
